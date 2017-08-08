@@ -1,10 +1,11 @@
 'use strict';
 
 import angular from 'angular';
-// import ngAnimate from 'angular-animate';
+import ngAnimate from 'angular-animate';
 import ngCookies from 'angular-cookies';
 import ngResource from 'angular-resource';
 import ngSanitize from 'angular-sanitize';
+import ngMaterial from 'angular-material';
 
 import uiRouter from 'angular-ui-router';
 
@@ -20,7 +21,7 @@ import util from '../components/util/util.module';
 
 import './app.scss';
 
-angular.module('webApp', [ngCookies, ngResource, ngSanitize, uiRouter, navbar, footer, main,
+angular.module('webApp', [ngCookies, ngResource, ngSanitize, uiRouter, ngMaterial, navbar, footer, main,
   constants, util
 ])
   .config(routeConfig);

@@ -14,10 +14,149 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   padding: 0.2em 0;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
+/**
+ * App-wide Styles
+ */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+// Variables
+$palette--bg: #FFF;
+$palette--bg--secondary: #FBFBFB;
+$palette--accent: #049FD9;
+$palette--light-gray: #CCCCCC;
+$palette--text: #58585b;
+$palette--black: #222222;
+$palette--alert: #FFD042;
+$palette--gray: #999999;
+$font__weight--regular: 400;
+$font__weight--bold: 700;
+$box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.12), 0px 2px 2px 0px rgba(0,0,0,0.24);
+$rule: thin solid $palette--light-gray;
+
+// Animation
+
+@mixin quint-ease-out($target: all, $duration: 600ms, $target2: false, $duration2: 400ms) {
+  @if $target2 == false {
+    transition: $target $duration cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  @else {
+    transition: $target $duration cubic-bezier(0.23, 1, 0.32, 1), $target2 $duration2 cubic-bezier(0.23, 1, 0.32, 1);
+  }
+}
+@mixin quint-ease-in($target: all, $duration: 600ms, $target2: false, $duration2: 400ms) {
+  @if $target2 == false {
+    transition: $target $duration cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  }
+  @else {
+    transition: $target $duration cubic-bezier(0.755, 0.05, 0.855, 0.06), $target2 $duration2 cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  }
+}
+
+// Helpers
+
+$screen--sm: 640px;
+$screen--lg: 960px;
+
+@mixin layout--sm($invert: false) {
+  @if $invert == false {
+    @media screen and (max-width: $screen--sm) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $screen--sm) {
+      @content;
+    }      
+  }
+}
+@mixin layout--lg($invert: false) {
+  @if $invert == false {
+    @media screen and (min-width: $screen--lg) {
+      @content;
+    }
+  } @else {
+    @media screen and (max-width: $screen--lg) {
+      @content;
+    }      
+  }
+}
+
+// Target IE 10+
+@mixin if-ie {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
+
+.slide {
+  &--off {
+    @include quint-ease-out(transform, 400ms);
+    transform: translateX(0%);
+  }
+  &--on {
+    transform: translateX(100%);
+  }
+}
+
+// Material layout bug fix
+@media screen and (max-width: 960px) {
+  [layout=column] { display: block; }
+}
+[layout-sm=column] { display: block; }
+
+// Main styles
+html, body {
+  // background-color: $palette--bg;
+  // font-family: 'Cisco Sans', 'Verdana';
+  // font-size: 16px;
+  // color: $palette--text;
+}
+h1, h2 {
+  font-weight: 400;
+}
+h1, h2, h3 {
+  color: $palette--text;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.3em;
+}
+h4 {
+  font-size: 1.15em;
+  font-weight: $font__weight--bold;
+}
+.fa {
+  color: $palette--gray;
+}
+img {
+	max-width: 100%;
+}
+md-content {
+  background-color: $palette--bg;
+}
+[ui-sref],
+[ng-click] {
+  cursor: pointer;
+}
+*:focus {
+  outline: none;
+}
+.md-button {
+  font-weight: $font__weight--bold;
+  margin-left: 0;
+}
+.md-button.md-accent.md-raised,
+.md-button.md-primary.md-raised {
+  color: #FFF;
+  .fa {
+    color: #FFF;
   }
 }
 
