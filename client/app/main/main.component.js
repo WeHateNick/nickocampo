@@ -4,7 +4,27 @@ import routing from './main.routes';
 
 export class MainController {
 
-  awesomeThings = [];
+  sidenavItems = [
+    {
+      name: 'Contact',
+      link: '#'
+    }, {
+      name: 'Resume',
+      link: '#'
+    }, {
+      name: 'Writing',
+      link: '#'
+    }, {
+      name: 'Case Studies',
+      link: '#'
+    }, {
+      name: 'Gallery',
+      link: '#'
+    }, {
+      name: 'Github',
+      link: 'https://github.com/WeHateNick/'
+    }
+  ];
 
   /*@ngInject*/
   constructor($http) {
