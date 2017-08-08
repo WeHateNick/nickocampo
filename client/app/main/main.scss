@@ -1,0 +1,57 @@
+.sidenav {
+  position: relative;
+  background-color: $palette__bg--secondary;
+  padding: 3em 0;
+  &__item {
+    position: relative;
+    display: block;
+    color: #FFF;
+    text-decoration: none;
+    padding: 1em 2em;
+    font-weight: $font__weight--bold;
+  }
+}
+.hero {
+  font-family: $font__family__zilla;
+  background-color: $palette__accent;
+  padding: 0 2em;
+  margin: 2em 0;
+  &__block {
+    padding: 1em 2em;
+    border: 4px solid $palette__text__light;
+    @include quint-ease-out(transform, 1.6s);
+    &--down {
+      transform: translateY(1.5em);
+      @include quint-ease-out(transform, 1.6s);
+    }
+  }
+  &__label {
+    font-weight: $font__weight--thin;
+    font-size: 1.1em;
+    margin-bottom: -0.5em;
+  }
+  &__heading {
+    font-weight: $font__weight--bold;
+    font-size: 2.7em;
+    margin: 0.25em;
+  }
+}
+.section {
+  margin: 2.5em;
+  &__header {
+    font-family: $font__family__zilla;
+    font-weight: $font__weight--thin;
+  }
+}
+.highlight-block {
+  text-align: center;
+  &__heading {
+    font-family: $font__family__zilla;
+    font-weight: $font__weight--medium;
+    font-size: 1.3em;
+  }
+  &__label {
+    font-family: $font__family__roboto;
+    font-weight: $font__weight--regular;
+  }
+}

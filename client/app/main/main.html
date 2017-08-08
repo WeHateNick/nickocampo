@@ -1,60 +1,98 @@
 <section layout="row" flex>
 
   <md-sidenav
-    class="md-sidenav-left"
+    class="md-sidenav-left sidenav"
     md-component-id="left"
     md-is-locked-open="$mdMedia('gt-sm')"
     md-whiteframe="4"
   >
-    <md-content layout-padding>
-      <md-button ng-click="close()" class="md-primary" hide-gt-sm>
-        Close Sidenav Left
-      </md-button>
-    </md-content>
-    
-    <a class="sidnav__item" md-ink-ripple href="#" ng-repeat="item in $ctrl.sidenavItems">
-      {{item.name}}
-    </a>
-    
+    <md-button ng-click="close()" class="md-primary" hide-gt-sm>
+      Close Sidenav Left
+    </md-button>
+    <div layout="column">
+      <a flex class="sidenav__item" md-ink-ripple href="#">
+        Contact
+      </a>
+      <a flex class="sidenav__item" md-ink-ripple href="https://docs.google.com/document/d/1vtowt3y2xNGnp4uUEr8QYC11D1H6P8DU9K6s_ybeQd0/edit?usp=sharing">
+        Resume
+      </a>
+      <a flex class="sidenav__item" md-ink-ripple href="#">
+        Writing
+      </a>
+      <a flex class="sidenav__item" md-ink-ripple href="#">
+        Case studies
+      </a>
+      <a flex class="sidenav__item" md-ink-ripple href="#">
+        Gallery
+      </a>
+      <a flex class="sidenav__item" md-ink-ripple href="https://github.com/WeHateNick/">
+        Github
+      </a>
+    </div>
   </md-sidenav>
-  <md-content flex layout-padding>
-    <div layout="column" layout-align="top center">
-      <p>
-        The left sidenav will 'lock open' on a medium (>=960px wide) device.
-      </p>
-      <p>
-        The right sidenav will focus on a specific child element.
-      </p>
-      <div>
-        <md-button ng-click="toggleLeft()" class="md-primary" hide-gt-md>
-          Toggle left
-        </md-button>
+  <md-content flex>
+    <div layout="column">
+      <div layout="row" class="hero">
+        <div class="hero__block" ng-class="{'hero__block--down': $ctrl.init === true}" flex="80">
+          <p class="hero__label">
+            My name is
+          </p>
+          <h1 class="hero__heading">
+            Nick Ocampo
+          </h1>
+        </div>
       </div>
-      <div>
-        <md-button ng-click="toggleRight()"
-        ng-hide="isOpenRight()"
-        class="md-primary">
-        Toggle right
-        </md-button>
+      <div layout="row" class="hero">
+        <div class="hero__block" ng-class="{'hero__block--down': $ctrl.init}" flex="80" flex-offset="20">
+          <p class="hero__label">
+            I am an
+          </p>
+          <h1 class="hero__heading">
+            Interface designer
+          </h1>
+        </div>
+      </div>
+      <div class="section">
+        <p class="section__header">
+          My career has been focused on three main areas
+        </p>
+        <div layout="row" layout-align="space-apart">
+          <div flex="33" class="highlight-block">
+            <div class="highlight-block__image">image</div>
+            <div class="highlight-block__heading">Coding</div>
+            <div class="highlight-block__label">8 years</div>
+          </div>
+          <div flex="33" class="highlight-block">
+            <div class="highlight-block__image">image</div>
+            <div class="highlight-block__heading">Design</div>
+            <div class="highlight-block__label">5 years</div>
+          </div>
+          <div flex="33" class="highlight-block">
+            <div class="highlight-block__image">image</div>
+            <div class="highlight-block__heading">Strategy</div>
+            <div class="highlight-block__label">6 years</div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <p class="section__header">
+          I have done work for a variety of clients
+        </p>
+        <div layout="row" layout-align="space-apart">
+          <div flex="33" class="highlight-block">
+            <div class="highlight-block__heading">Startups</div>
+            <div class="highlight-block__label">3 years</div>
+          </div>
+          <div flex="33" class="highlight-block">
+            <div class="highlight-block__heading">Agency</div>
+            <div class="highlight-block__label">3 years</div>
+          </div>
+          <div flex="33" class="highlight-block">
+            <div class="highlight-block__heading">Enterprise</div>
+            <div class="highlight-block__label">1 year</div>
+          </div>
+        </div>
       </div>
     </div>
-    <div flex></div>
   </md-content>
-  <md-sidenav class="md-sidenav-right md-whiteframe-4dp" md-component-id="right">
-    <md-toolbar class="md-theme-light">
-      <h1 class="md-toolbar-tools">Sidenav Right</h1>
-    </md-toolbar>
-    <md-content layout-padding>
-      <form>
-        <md-input-container>
-          <label for="testInput">Test input</label>
-          <input type="text" id="testInput"
-          ng-model="data" md-autofocus>
-        </md-input-container>
-      </form>
-      <md-button ng-click="close()" class="md-primary">
-        Close Sidenav Right
-      </md-button>
-    </md-content>
-  </md-sidenav>
 </section>

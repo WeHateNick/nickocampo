@@ -1,7 +1,6 @@
 $fa-font-path: '/assets/fonts/font-awesome/';
 @import '~font-awesome/scss/font-awesome';
-
-// @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,900|Roboto:300,500,700,900);
+@import url(https://fonts.googleapis.com/css?family=Zilla+Slab:300,500,700|Roboto:400,700);
 
 /**
  * App-wide Styles
@@ -26,18 +25,20 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 }
 
 // Variables
-$palette--bg: #FFF;
-$palette--bg--secondary: #FBFBFB;
-$palette--accent: #049FD9;
-$palette--light-gray: #CCCCCC;
-$palette--text: #58585b;
-$palette--black: #222222;
-$palette--alert: #FFD042;
-$palette--gray: #999999;
+$palette__bg: #FFF;
+$palette__bg--secondary: #68767C;
+$palette__accent: #FAFE38;
+$palette__text: rgba(0, 0, 0, 0.87);
+$palette__text--light: rgba(0, 0, 0, 0.54);
+$palette__rule: rgba(0, 0, 0, 0.12);
+$font__family__roboto: 'Roboto', 'Verdana', sans-serif;
+$font__family__zilla: 'Zilla Slab', 'Roboto', serif;
+$font__weight--thin: 300;
 $font__weight--regular: 400;
+$font__weight--medium: 500;
 $font__weight--bold: 700;
 $box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.12), 0px 2px 2px 0px rgba(0,0,0,0.24);
-$rule: thin solid $palette--light-gray;
+$rule: thin solid $palette__rule;
 
 // Animation
 
@@ -111,16 +112,16 @@ $screen--lg: 960px;
 
 // Main styles
 html, body {
-  // background-color: $palette--bg;
-  // font-family: 'Cisco Sans', 'Verdana';
-  // font-size: 16px;
-  // color: $palette--text;
+  background-color: $palette__bg;
+  font-family: $font__family__roboto;
+  font-size: 18px;
+  color: $palette__text;
 }
 h1, h2 {
   font-weight: 400;
 }
 h1, h2, h3 {
-  color: $palette--text;
+  color: $palette__text;
 }
 h2 {
   font-size: 2em;
@@ -133,13 +134,13 @@ h4 {
   font-weight: $font__weight--bold;
 }
 .fa {
-  color: $palette--gray;
+  color: $palette__text--light;
 }
 img {
 	max-width: 100%;
 }
 md-content {
-  background-color: $palette--bg;
+  background-color: $palette__bg;
 }
 [ui-sref],
 [ng-click] {

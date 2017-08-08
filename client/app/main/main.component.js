@@ -4,6 +4,11 @@ import routing from './main.routes';
 
 export class MainController {
 
+  /*@ngInject*/
+  constructor($timeout) {
+    this.$timeout = $timeout;
+  }
+
   sidenavItems = [
     {
       name: 'Contact',
@@ -26,16 +31,10 @@ export class MainController {
     }
   ];
 
-  /*@ngInject*/
-  constructor($http) {
-    this.$http = $http;
-  }
-
   $onInit() {
-    this.$http.get('/api/things')
-      .then(response => {
-        this.awesomeThings = response.data;
-      });
+    this.$timeout( () => {
+      this.init = true;      
+    }, 1500);
   }
 }
 
