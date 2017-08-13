@@ -62,7 +62,7 @@ $rule: thin solid $palette__rule;
 
 // Helpers
 
-$screen--sm: 640px;
+$screen--sm: 600px;
 $screen--lg: 960px;
 
 @mixin layout--sm($invert: false) {
