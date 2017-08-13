@@ -5,8 +5,13 @@ import routing from './main.routes';
 export class MainController {
 
   /*@ngInject*/
-  constructor ($timeout) {
+  constructor ($timeout, $mdSidenav) {
     this.$timeout = $timeout;
+    this.$mdSidenav = $mdSidenav;
+  }
+
+  toggleMenu () {
+    this.$mdSidenav('left').toggle()
   }
 
   sidenavItems = [

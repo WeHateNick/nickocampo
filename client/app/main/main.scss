@@ -10,6 +10,16 @@
     padding: 1em 2em;
     font-weight: $font__weight--bold;
   }
+  .menu-button {
+    color: #FFF;
+    margin: -2em 1em 1em;
+    .fa {
+      color: #FFF;
+    }
+  }
+}
+.menu-button {
+  margin: 1em 1em -1em;
 }
 .hero {
   font-family: $font__family__zilla;
