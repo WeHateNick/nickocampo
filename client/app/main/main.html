@@ -5,12 +5,14 @@
     md-component-id="left"
     md-is-locked-open="$mdMedia('gt-sm')"
     md-whiteframe="4"
-    flex="20"
+    flex="30"
   >
-    <md-button ng-click="close()" class="md-primary" hide-gt-sm>
-      Close Sidenav Left
-    </md-button>
     <div layout="column">
+      <div layout="row" layout-align="end">
+        <md-button ng-click="$ctrl.toggleMenu()" hide-gt-sm class="menu-button">
+          Close menu <i class="fa fa-arrow-right"></i>
+        </md-button>
+      </div>
       <a flex class="sidenav__item" md-ink-ripple href="#">
         Contact
       </a>
@@ -33,6 +35,9 @@
   </md-sidenav>
   <md-content flex>
     <div layout="column">
+      <div hide-gt-sm class="menu-button">
+        <md-button ng-click="$ctrl.toggleMenu()"><i class="fa fa-arrow-left"></i> Menu</md-button>
+      </div>
       <div layout="row" class="hero">
         <div class="hero__block" ng-class="{'hero__block--down': $ctrl.init === true}" flex="80" flex-xs="95">
           <p class="hero__label">
