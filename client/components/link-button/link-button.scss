@@ -1,0 +1,24 @@
+.link-button {
+  display: inline-block;
+  margin-top: 1em;
+  border: $rule;
+  border-radius: 2px;
+  padding: 0.25em 1em;
+  text-transform: none;
+  &.md-raised:not([disabled]) {
+    background-color: #FFF;
+    @include quint-ease-out(background-color);
+    &:hover {
+      background-color: $palette__accent;
+      @include quint-ease-out(background-color);
+    }
+  }
+  &__label {
+    font-weight: $font__weight--bold;
+  }
+  &__icon .fa {
+    color: $palette__text;
+    margin-left: 0.5em;
+    margin-top: 0.2em; 
+  }
+}
