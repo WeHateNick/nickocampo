@@ -86,18 +86,25 @@
         <p class="section__header">
           I have done work for a variety of clients
         </p>
-        <div layout="row" layout-align="space-apart">
-          <div flex="33" class="highlight-block__item">
-            <div class="highlight-block__heading">Startups</div>
-            <div class="highlight-block__label">3 years</div>
+        <div layout-gt-sm="column" layout="row" class="highlight-block">
+          <div flex layout="row" layout-align="space-apart" class="highlight-block__container">
+            <div flex="33" class="highlight-block__item" ng-mouseover="$ctrl.setDetails('startups')">
+              <div class="highlight-block__heading">Startups</div>
+              <div class="highlight-block__label">3 years</div>
+            </div>
+            <div flex="33" class="highlight-block__item" ng-mouseover="$ctrl.setDetails('agencies')">
+              <div class="highlight-block__heading">Agencies</div>
+              <div class="highlight-block__label">3 years</div>
+            </div>
+            <div flex="33" class="highlight-block__item" ng-mouseover="$ctrl.setDetails('enterprises')">
+              <div class="highlight-block__heading">Enterprises</div>
+              <div class="highlight-block__label">1 year</div>
+            </div>
           </div>
-          <div flex="33" class="highlight-block__item">
-            <div class="highlight-block__heading">Agencies</div>
-            <div class="highlight-block__label">3 years</div>
-          </div>
-          <div flex="33" class="highlight-block__item">
-            <div class="highlight-block__heading">Enterprises</div>
-            <div class="highlight-block__label">1 year</div>
+          <div flex layout-gt-sm="row" layout="column" layout-align="space-apart" class="highlight-block__detail">
+            <div flex class="highlight-block__detail__item" ng-repeat="item in $ctrl.details">
+              {{item}}
+            </div>
           </div>
         </div>
       </div>

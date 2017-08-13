@@ -49,11 +49,27 @@ export class MainController {
       'Product management',
       'Behavioral anlytics',
       'SEO and SEM'
+    ],
+    startups: [
+      'MortarStone',
+      'BetaFish',
+      'Quaffer'
+    ],
+    agencies: [
+      'KPS3'
+    ],
+    enterprises: [
+      'Cisco',
+      'Hewlett Packard Enterprises'
     ]
   };
 
   setDetails (item) {
-    this.details = this.itemDetails[item];
+    if (this.itemDetails[item]) {
+      this.details = this.itemDetails[item];      
+    } else {
+      console.error(`setDeatils error. "${item}" is not a valid item detail.`);
+    }
   }
 
   $onInit () {
