@@ -45,8 +45,18 @@
   }
 }
 .highlight-block {
-  text-align: center;
-  margin-top: 2em;
+  &__item {
+    text-align: center;
+    margin-top: 2em;
+    padding: 1em;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom: thin solid transparent;
+    &:hover {
+      background-color: $palette__accent;
+      @include quint-ease-out(background-color);
+    }
+  }
   &__image {
     margin: 1em 0;
   }
@@ -59,6 +69,17 @@
   &__label {
     font-family: $font__family__roboto;
     font-weight: $font__weight--regular;
+  }
+  &__detail {
+    text-align: center;
+    padding: 0.5em;
+    background-color: $palette__accent--secondary;
+    border-top: $rule;
+    opacity: 0;
+  }
+  &:hover .highlight-block__detail {
+    opacity: 1;
+    @include quint-ease-out(opacity);
   }
 }
 .timeline {
@@ -85,7 +106,7 @@
     }
   }
   .section__header {
-    background-color: #E9EBEB;
+    background-color: $palette__accent--secondary;
     border-bottom: $rule;
     margin-left: -2.5em;
     margin-right: -2.5em;
