@@ -55,6 +55,7 @@
     &:hover {
       background-color: $palette__accent;
       @include quint-ease-out(background-color);
+      cursor: pointer;
     }
   }
   &__image {
