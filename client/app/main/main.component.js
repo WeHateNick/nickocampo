@@ -81,6 +81,7 @@ export class MainController {
     this.$timeout( () => {
       this.init = true;      
     }, 1500);
+    this.itemDetails[0];
   }
 }
 
