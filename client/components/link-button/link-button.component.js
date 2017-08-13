@@ -13,11 +13,13 @@ export default angular.module('directives.linkButton', [])
         <span class="link-button__icon" flex="10">
           <i class="fa fa-external-link"></i>
         </span>
+        <md-tooltip>{{$ctrl.tooltip}}</md-tooltip>
       </md-button>
     `,
     transclude: true,
     bindings: {
-      href: '@'
+      href: '@',
+      tooltip: '@'
     }
   })
   .name;

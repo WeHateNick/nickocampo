@@ -161,6 +161,11 @@ md-content {
   }
 }
 
+// Utilities
+.margin-top {
+  margin-top: 2em;
+}
+
 // Component styles are injected through gulp
 /* inject:scss */
 @import 'main/main';

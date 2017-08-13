@@ -21,7 +21,7 @@
     border: 4px solid transparent;
     border-radius: 2px;
     &--down {
-      border-color: $palette__text__light;
+      border-color: $palette__text--light;
       transform: translateY(1.5em);
       @include quint-ease-out(transform, 1.6s, border-color, 1.6s);
     }
@@ -41,7 +41,7 @@
   margin: 2.5em;
   &__header {
     font-family: $font__family__zilla;
-    font-weight: $font__weight--thin;
+    font-weight: $font__weight--medium;
   }
 }
 .highlight-block {
@@ -62,22 +62,35 @@
   }
 }
 .timeline {
+  &__item {
+    margin-bottom: 4em;
+  }
   &__header {
     font-weight: $font__weight--bold;
     margin-top: 1.65em;
   }
+  &__intro {
+    font-family: $font__family__zilla;
+    font-weight: $font__weight--thin;
+    margin-top: 2em;
+  }
   &__links {
     margin-top: 1em;
+    margin-bottom: 1em;
   }
   p {
     max-width: 35em;
+    a {
+      color: $palette__text;
+    }
   }
   .section__header {
     background-color: $palette__accent;
     border-bottom: $rule;
-    font-weight: $font__weight--medium;
     margin-left: -2.5em;
     margin-right: -2.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
     padding: 0.5em 2.5em;
     max-width: none;
   }
