@@ -21,6 +21,17 @@
 .menu-button {
   margin: 1em 1em -1em;
 }
+.contact {
+  @include layout--sm('invert') {
+    padding: 2em;    
+  }
+  &__item {
+    padding: 1em;
+    a {
+      color: $palette__text;
+    }
+  }
+}
 .hero {
   font-family: $font__family__zilla;
   background-color: $palette__accent;

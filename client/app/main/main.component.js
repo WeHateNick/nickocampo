@@ -5,13 +5,39 @@ import routing from './main.routes';
 export class MainController {
 
   /*@ngInject*/
-  constructor ($timeout, $mdSidenav) {
+  constructor ($timeout, $mdSidenav, $mdDialog) {
     this.$timeout = $timeout;
     this.$mdSidenav = $mdSidenav;
+    this.$mdDialog = $mdDialog;
   }
 
   toggleMenu () {
     this.$mdSidenav('left').toggle()
+  }
+
+  contactDialog (ev) {
+    this.$mdDialog.show(
+      this.$mdDialog.alert()
+        .parent(angular.element(document.querySelector('#popupContainer')))
+        .clickOutsideToClose(true)
+        .title('Contact')
+        .htmlContent(`
+          <div class="contact" layout="column">
+            <div flex class="contact__item">
+              <i class="fa fa-envelope"></i> <a href="mailto:nick@wehatenick.com">nick@wehatenick.com</a>
+            </div>
+            <div flex class="contact__item">
+              <i class="fa fa-phone"></i> <a href="tel:7757727446">(775) 772-7446</a>
+            </div>
+            <div flex class="contact__item">
+              <i class="fa fa-home"></i> 1027 Bellevue Ct. E. Seattle, WA
+            </div>
+          </div>
+        `)
+        .ariaLabel('Contact info')
+        .ok('Close')
+        .targetEvent(ev)
+    );
   }
 
   sidenavItems = [
