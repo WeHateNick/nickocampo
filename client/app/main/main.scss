@@ -78,6 +78,7 @@
     border-top-right-radius: 4px;
     &:hover {
       @include layout--sm('invert') {
+        cursor: pointer;
         background-color: $palette__accent;
         @include quint-ease-out(background-color);
         @include quint-ease-out(border-color);
@@ -135,11 +136,15 @@
   .section__header {
     background-color: $palette__accent--secondary;
     border-bottom: $rule;
-    margin-left: -2.5em;
-    margin-right: -2.5em;
     margin-top: 1em;
     margin-bottom: 1em;
     padding: 0.5em 2.5em;
     max-width: none;
+    margin-left: -2.5em;
+    margin-right: -2.5em;
+    @include layout--sm {
+      margin-left: -1em;
+      margin-right: -1em;
+    }
   }
 }
