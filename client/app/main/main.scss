@@ -76,11 +76,11 @@
     padding: 1em;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
-    border-bottom: thin solid transparent;
     &:hover {
       @include layout--sm('invert') {
         background-color: $palette__accent;
         @include quint-ease-out(background-color);
+        @include quint-ease-out(border-color);
       }
     }
   }
