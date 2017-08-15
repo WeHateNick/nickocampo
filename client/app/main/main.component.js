@@ -40,6 +40,23 @@ export class MainController {
     );
   }
 
+  logoAlbumDialog (ev) {
+    debugger;
+    this.$mdDialog.show(
+      this.$mdDialog.alert()
+        .parent(angular.element(document.querySelector('#popupContainer')))
+        .clickOutsideToClose(true)
+        .title('Logo design')
+        .htmlContent(`
+          <p>Hello there</p>
+          <a data-flickr-embed="true"  href="https://www.flickr.com/photos/151603805@N03/albums/72157687528770056" title="Logo Design"><img src="https://farm5.staticflickr.com/4342/36411722802_e752e840f3_z.jpg" width="640" height="298" alt="Logo Design"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+        `)
+        .ariaLabel('Contact info')
+        .ok('Close')
+        .targetEvent(ev)
+    );
+  }
+
   sidenavItems = [
     {
       name: 'Contact',

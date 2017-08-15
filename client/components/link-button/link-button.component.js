@@ -6,7 +6,7 @@ import angular from 'angular';
 export default angular.module('directives.linkButton', [])
   .component('linkButton', {
     template: `
-      <md-button class="link-button md-raised" layout="row" md-ink-ripple="#FFF000" href="{{href}}" target="_blank">
+      <md-button ng-if="$ctrl.wdHref" class="link-button md-raised" layout="row" md-ink-ripple="#FFF000" href="{{$ctrl.wdHref}}" target="_blank">
         <span class="link-button__label" flex="90">
           <ng-transclude></ng-transclude>
         </span>
@@ -18,7 +18,7 @@ export default angular.module('directives.linkButton', [])
     `,
     transclude: true,
     bindings: {
-      href: '@',
+      wdHref: '@',
       tooltip: '@'
     }
   })
