@@ -36,7 +36,10 @@
   font-family: $font__family__zilla;
   background-color: $palette__accent;
   padding: 0 2em;
-  margin: 2em 0;
+  margin: 1.5em 0;
+  @include layout--lg('invert') {
+    margin: 2em 0 3em;
+  }
   &__block {
     padding: 1em 2em;
     border: 4px solid transparent;
@@ -60,6 +63,7 @@
 }
 .section {
   margin: 2.5em;
+  padding-top: 2em;
   @include layout--sm {
     margin-left: 1em;
     margin-right: 1em;
