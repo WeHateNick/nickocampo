@@ -108,7 +108,7 @@ export class MainController {
     ],
     enterprises: [
       'Cisco',
-      'Hewlett Packard Enterprises'
+      'Hewlett Packard Enterprise'
     ]
   };
 
