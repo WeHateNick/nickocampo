@@ -95,7 +95,7 @@ export class MainController {
     strategy: [
       'Usability testing',
       'Product management',
-      'Behavioral anlytics',
+      'Behavioral analytics',
       'SEO and SEM'
     ],
     startups: [
