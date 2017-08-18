@@ -1,6 +1,8 @@
-# web
+# My Portfolio - Nick Ocampo
 
-This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 4.2.2.
+## About this project
+
+This is a fullstack JavaScript application with NodeJS on the backend and AngularJS 1.5 on the frontend. Using BabelJS to transpile ES6 into JavaScript. The scaffold of the project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 4.2.2.
 
 ## Getting Started
 
