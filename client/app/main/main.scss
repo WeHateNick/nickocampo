@@ -1,11 +1,12 @@
 .sidenav {
   position: relative;
   background-color: $palette__bg--secondary;
+  border-right: 8px solid #9ABED9;
   padding: 3em 0;
   &__item {
     position: relative;
     display: block;
-    color: #FFF;
+    color: #6D6A6A;
     text-decoration: none;
     padding: 1em 2em;
     font-weight: $font__weight--bold;
@@ -138,7 +139,7 @@
     }
   }
   .section__header {
-    background-color: $palette__accent--secondary;
+    background-color: $palette__bg--secondary;
     border-bottom: $rule;
     margin-top: 1em;
     margin-bottom: 1em;
