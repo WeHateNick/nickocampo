@@ -30,7 +30,7 @@ export class MainController {
               <i class="fa fa-phone"></i> <a href="tel:7757727446">(775) 772-7446</a>
             </div>
             <div flex class="contact__item">
-              <i class="fa fa-home"></i> 1027 Bellevue Ct. E. Seattle, WA
+              <i class="fa fa-home"></i> Seattle, WA
             </div>
           </div>
         `)
