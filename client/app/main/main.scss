@@ -46,7 +46,7 @@
     border: 4px solid transparent;
     border-radius: 2px;
     &--down {
-      border-color: $palette__text--light;
+      border-color: rgba(0,0,0,0.7);
       transform: translateY(1.5em);
       @include quint-ease-out(transform, 1.6s, border-color, 1.6s);
     }
