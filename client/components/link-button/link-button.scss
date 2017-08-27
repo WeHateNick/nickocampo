@@ -5,12 +5,14 @@
   border-radius: 2px;
   padding: 0.25em 1em;
   text-transform: none;
+  border: 3px solid transparent;
   &.md-raised:not([disabled]) {
     background-color: #FFF;
     @include quint-ease-out(background-color);
     &:hover {
+      border-color: $palette__stroke;
       background-color: $palette__accent;
-      @include quint-ease-out(background-color);
+      @include quint-ease-out(background-color, 800ms);
     }
   }
   &__label {
