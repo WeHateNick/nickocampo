@@ -91,10 +91,8 @@
       @include layout--sm('invert') {
         cursor: pointer;
         border-color: $palette__accent--secondary;
-        box-shadow: $box-shadow;
         @include quint-ease-out(background-color);
         @include quint-ease-out(border-color);
-        @include quint-ease-out(box-shadow);
       }
     }
   }
