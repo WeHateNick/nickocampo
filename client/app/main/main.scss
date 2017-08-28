@@ -130,7 +130,9 @@
     margin-bottom: 4em;
   }
   &__header {
-    font-weight: $font__weight--bold;
+    font-family: $font__family__zilla;
+    // color: $palette__accent--secondary;
+    background-color: $palette__accent;
     margin-top: 0;
     margin-bottom: 0.5em;
     border: 3px solid $palette__stroke;
