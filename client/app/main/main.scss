@@ -117,8 +117,7 @@
     border-bottom-right-radius: 2px;
     font-family: $font__family__zilla;
     border: $rule;
-    border-top: 3px solid $palette__stroke;
-    border-bottom: 3px solid $palette__stroke;
+    border: 3px solid $palette__stroke;
     opacity: 0;
   }
   &:hover .highlight-block__detail {
