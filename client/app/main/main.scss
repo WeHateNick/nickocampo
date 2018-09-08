@@ -133,9 +133,9 @@
     font-family: $font__family__zilla;
     margin-top: 0;
     margin-bottom: 0.5em;
-    border: 3px solid $palette__stroke;
+    border-bottom: 3px solid $palette__accent--secondary;
     border-radius: 2px;
-    padding: 0.5em 0.75em;
+    padding: 0.5em 0 0;
     display: inline-block;
   }
   &__intro {
